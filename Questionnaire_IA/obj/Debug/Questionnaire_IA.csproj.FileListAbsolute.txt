@@ -1,0 +1,9 @@
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe.config
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\bin\Debug\Questionnaire_IA.pdb
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\obj\Debug\Questionnaire_IA.csprojResolveAssemblyReference.cache
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormQuest.resources
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\obj\Debug\Questionnaire_IA.Properties.Resources.resources
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\obj\Debug\Questionnaire_IA.csproj.GenerateResource.Cache
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\obj\Debug\Questionnaire_IA.exe
+c:\users\abouquet001\documents\visual studio 2015\Projects\ProjetIA\Questionnaire_IA\obj\Debug\Questionnaire_IA.pdb
