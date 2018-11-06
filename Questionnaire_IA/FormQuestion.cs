@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Questionnaire_IA
 {
-    public partial class FormQuest : Form
+    public partial class FormQuestion : Form
     {
-        public FormQuest()
+        public FormQuestion()
         {
             InitializeComponent();
         }
 
-        
+       
     }
 }

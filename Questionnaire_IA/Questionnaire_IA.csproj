@@ -46,18 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormQuest.cs">
+    <Compile Include="FormQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuest.Designer.cs">
-      <DependentUpon>FormQuest.cs</DependentUpon>
+    <Compile Include="FormQuestion.Designer.cs">
+      <DependentUpon>FormQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestionnaire.Designer.cs">
+      <DependentUpon>FormQuestionnaire.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Reponse.cs" />
-    <EmbeddedResource Include="FormQuest.resx">
-      <DependentUpon>FormQuest.cs</DependentUpon>
+    <EmbeddedResource Include="FormQuestion.resx">
+      <DependentUpon>FormQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestionnaire.resx">
+      <DependentUpon>FormQuestionnaire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

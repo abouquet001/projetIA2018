@@ -19,7 +19,7 @@ namespace Questionnaire_IA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQuest());
+            Application.Run(new FormQuestion());
 
             Reponse rep1 = new Reponse();
             Reponse rep2 = new Reponse();
