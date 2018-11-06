@@ -56,6 +56,7 @@
             this.btn_valider.TabIndex = 5;
             this.btn_valider.Text = "Valider";
             this.btn_valider.UseVisualStyleBackColor = true;
+            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
             // box_reponse1
             // 
@@ -114,6 +115,7 @@
             this.btn_annuler.TabIndex = 11;
             this.btn_annuler.Text = "Annuler";
             this.btn_annuler.UseVisualStyleBackColor = true;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
             // FormQuestion
             // 

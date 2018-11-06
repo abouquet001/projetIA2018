@@ -6,16 +6,28 @@ using System.Threading.Tasks;
 
 namespace Questionnaire_IA
 {
-    class Question
+    public class Question
     {
-        int numero;
-        string enonce;
-        List<Reponse> reponses;
-        public Question (int num,string lbl,List<Reponse> reps )
+        // Propriétés 
+
+        int Numero { get; set; }
+        string Enonce { get; set; }
+        List<Reponse> Reponses { get; set; }
+
+        // Constructeurs
+
+        public Question (int _numero,string _libelle,List<Reponse> _list_reponse )
         {
-            numero = num;
-            enonce = lbl;
-            reponses = reps;
+            Numero = _numero;
+            Enonce = _libelle;
+            Reponses = _list_reponse;
         }
+
+        public Question() { }
+
+        // Méthodes
+
+
+
     }
 }
