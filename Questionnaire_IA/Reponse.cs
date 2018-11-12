@@ -10,10 +10,10 @@ namespace Questionnaire_IA
     {
         // Propriétés
 
-        int Numero { get; set; }
-        int NumQuestion { get; set; }
-        string Intitule { get; set; }
-        bool Juste { get; set; }
+        public int Numero { get; set; }
+        public int NumQuestion { get; set; }
+        public string Intitule { get; set; }
+        public bool Juste { get; set; }
 
         // Constructeurs 
 

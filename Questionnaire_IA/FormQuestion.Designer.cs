@@ -61,7 +61,7 @@
             // box_reponse1
             // 
             this.box_reponse1.AutoSize = true;
-            this.box_reponse1.Location = new System.Drawing.Point(134, 213);
+            this.box_reponse1.Location = new System.Drawing.Point(65, 202);
             this.box_reponse1.Name = "box_reponse1";
             this.box_reponse1.Size = new System.Drawing.Size(90, 21);
             this.box_reponse1.TabIndex = 6;
@@ -80,7 +80,7 @@
             // box_reponse2
             // 
             this.box_reponse2.AutoSize = true;
-            this.box_reponse2.Location = new System.Drawing.Point(134, 284);
+            this.box_reponse2.Location = new System.Drawing.Point(65, 275);
             this.box_reponse2.Name = "box_reponse2";
             this.box_reponse2.Size = new System.Drawing.Size(90, 21);
             this.box_reponse2.TabIndex = 8;
@@ -90,7 +90,7 @@
             // box_reponse3
             // 
             this.box_reponse3.AutoSize = true;
-            this.box_reponse3.Location = new System.Drawing.Point(134, 355);
+            this.box_reponse3.Location = new System.Drawing.Point(65, 346);
             this.box_reponse3.Name = "box_reponse3";
             this.box_reponse3.Size = new System.Drawing.Size(90, 21);
             this.box_reponse3.TabIndex = 9;
@@ -100,7 +100,7 @@
             // box_reponse4
             // 
             this.box_reponse4.AutoSize = true;
-            this.box_reponse4.Location = new System.Drawing.Point(134, 418);
+            this.box_reponse4.Location = new System.Drawing.Point(65, 416);
             this.box_reponse4.Name = "box_reponse4";
             this.box_reponse4.Size = new System.Drawing.Size(90, 21);
             this.box_reponse4.TabIndex = 10;
