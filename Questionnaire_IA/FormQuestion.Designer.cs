@@ -131,7 +131,7 @@
             this.Controls.Add(this.btn_valider);
             this.Controls.Add(this.lbl_num_question);
             this.Name = "FormQuestion";
-            this.Text = "FormQuestion";
+            this.Text = "Questions";
             this.ResumeLayout(false);
             this.PerformLayout();
 

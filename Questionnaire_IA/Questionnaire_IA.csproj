@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFin.Designer.cs">
+      <DependentUpon>FormFin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Reponse.cs" />
+    <EmbeddedResource Include="FormFin.resx">
+      <DependentUpon>FormFin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQuestion.resx">
       <DependentUpon>FormQuestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reponses.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

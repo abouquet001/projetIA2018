@@ -18,3 +18,4 @@ E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.ex
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.pdb
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.exe
+E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormFin.resources

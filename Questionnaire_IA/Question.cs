@@ -16,7 +16,7 @@ namespace Questionnaire_IA
 
         // Constructeurs
 
-        public Question (int _numero,string _libelle,List<Reponse> _list_reponse )
+        public Question (int _numero, string _libelle, List<Reponse> _list_reponse)
         {
             Numero = _numero;
             Enonce = _libelle;

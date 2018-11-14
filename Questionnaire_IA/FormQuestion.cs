@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using System.Xml;
+//using System.Xml.Serialization;
 
 namespace Questionnaire_IA
 {
@@ -17,11 +19,13 @@ namespace Questionnaire_IA
         static int numeroQuestion = 1;
         Random R = new Random();
         List<Question> lsQuestion = new List<Question> { };
+        List<Question> lsQuestionsPosees = new List<Question> { };
+        List<bool> lsRepUser = new List<bool> { };
 
 
         public FormQuestion()
         {
-
+            //Initialisation
             InitializeComponent();
             InitializeQuestion();
 
@@ -63,7 +67,9 @@ namespace Questionnaire_IA
             box_reponse2.Text = lsQuestion[k].Reponses[1].Intitule;
             box_reponse3.Text = lsQuestion[k].Reponses[2].Intitule;
             box_reponse4.Text = lsQuestion[k].Reponses[3].Intitule;
-          
+            //Transfert dans listes
+            lsQuestionsPosees.Add(lsQuestion[k]);
+            lsQuestion.Remove(lsQuestion[k]);
             numeroQuestion++;
         }
 
@@ -77,6 +83,7 @@ namespace Questionnaire_IA
         private bool Evaluation(List<Question> lsQuestion, int indice)
         {
             bool correct = true;
+            bool semiJuste = false;
             //CAS 1 : cocher une réponse fausse
             if ((box_reponse1.Checked)&&(lsQuestion[indice].Reponses[0].Juste == false))
             {
@@ -94,35 +101,75 @@ namespace Questionnaire_IA
             {
                 correct = false;
             }
-            return correct;
             //CAS 2 : ne rien cocher
+            if ((box_reponse1.Checked == false)&&(box_reponse2.Checked == false)&&(box_reponse3.Checked == false)&&(box_reponse4.Checked == false))
+            {
+                correct = false;
+            }
             //CAS 3 : ne pas cocher toutes les bonnes réponses
+            /*int nbReponsesJustes = 0;
+            for (int k = 0; k < lsQuestion.Count; k++)
+            {
+                for (int l = 0; l < 4; l++)
+                {
+                    if (lsQuestion[k].Reponses[l].Juste == true)
+                    {
+                        nbReponsesJustes++;
+                    }
+                }
 
-            //for (int k = 0; k < lsQuestion.Count; k++)
-            //{
-
-            //}
+            }*/
+            if ((lsQuestion[indice].Reponses[0].Juste == true)&&(box_reponse1.Checked == false))
+            {
+                correct = false;
+            }
+            if ((lsQuestion[indice].Reponses[1].Juste == true) && (box_reponse2.Checked == false))
+            {
+                correct = false;
+            }
+            if ((lsQuestion[indice].Reponses[2].Juste == true) && (box_reponse3.Checked == false))
+            {
+                correct = false;
+            }
+            if ((lsQuestion[indice].Reponses[3].Juste == true) && (box_reponse4.Checked == false))
+            {
+                correct = false;
+            }
+            //vérifiez que le nb de coché correspond au nb de réponses attendues ?
+            
+            return correct;
         }
 
 
-        private void Enregistrer()
+        private void Enregistrer(bool resultat)
         {
             //en entree elle prend le résultat d'évaluation
-            // enregistre sur le fichier xml
+            // enregistre reponse
+            lsRepUser.Add(resultat);
+            
         }
 
 
 
-        private void Noter()
+        private void Noter(List<bool> _lsReponses)
         {
-
+            int noteFinale = 0;
+            for (int k = 0; k < _lsReponses.Count; k++)
+            {
+                if (_lsReponses[k] == true)
+                {
+                    noteFinale++;
+                }
+            }
+            
         }
 
 
 
-        private void Correction()
+        private void Correction()//dans autre forme du coup
         {
             //à la fin du questionnaire, affiche la correction des questions posées
+
         }
 
 
@@ -141,8 +188,24 @@ namespace Questionnaire_IA
         private void btn_valider_Click(object sender, EventArgs e)
         {
             //quand l'user valide, il faut évaluer sa réponse, enregistrer l'évaluation, passer à la question suivante
+            //Récupérer à quelle question on est 
+            string intituleQuestion = lbl_intitule_question.Text;
+            
+            for (int i = 0; i < lsQuestion.Count; i++)
+            {
+                if (lsQuestion[i].Enonce == intituleQuestion)
+                {
+                    Evaluation(lsQuestion,i);
+                }
+            }
 
             QuestionSuivante();
+
+            if (numeroQuestion == 5) //à modifier
+            {
+                FormFin form3 = new FormFin();
+                form3.Show();
+            }
         }
 
         
