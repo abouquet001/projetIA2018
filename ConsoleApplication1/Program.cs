@@ -13,14 +13,47 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Reponse rep1 = new Reponse();
-            Reponse rep2 = new Reponse();
-            List<Reponse> reps = new List<Reponse> { rep1, rep2 };
-            Question q1 = new Question(1, "Qui etes vous ?", reps);
-            List<Question> questions = new List<Question> { q1 };
-            StreamWriter writer = new StreamWriter("questions.xml");
-            new XmlSerializer(typeof(List<Question>)).Serialize(writer, questions);
-            writer.Close();
+            List<Question> questions = new List<Question>();
+            Reponse r1 = new Reponse()
+            {
+                Juste = true,
+                Numero = 1,
+                NumQuestion = 1,
+                Intitule = "Bonjour"
+            };
+            Reponse r2 = new Reponse()
+            {
+                Juste = false,
+                Numero = 2,
+                NumQuestion = 1,
+                Intitule = "Au revoir"
+            };
+            Reponse r3 = new Reponse()
+            {
+                Juste = false,
+                Numero = 3,
+                NumQuestion = 1,
+                Intitule = "Au revoir"
+            };
+            Reponse r4 = new Reponse()
+            {
+                Juste = false,
+                Numero = 4,
+                NumQuestion = 1,
+                Intitule = "Au revoi"
+            };
+            Question q1 = new Question()
+            {
+                Numero = 1,
+                Enonce = "Quel reponse veut dire bonjour ?",
+                Reponses = new List<Reponse> { r1, r2, r3, r4 }
+            };
+            questions.Add(q1);
+            XmlSerializer xs = new XmlSerializer(typeof(List<Question>));
+            using (StreamWriter wr = new StreamWriter("C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml"))
+            {
+                xs.Serialize(wr, questions);
+            }
         }
     }
 }
