@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Numero>1</Numero>
+    <Enonce>Quel reponse veut dire bonjour ?</Enonce>
+    <Reponses>
+      <Reponse>
+        <Numero>1</Numero>
+        <NumQuestion>1</NumQuestion>
+        <Intitule>Bonjour</Intitule>
+        <Juste>true</Juste>
+      </Reponse>
+      <Reponse>
+        <Numero>2</Numero>
+        <NumQuestion>1</NumQuestion>
+        <Intitule>Au revoir</Intitule>
+        <Juste>false</Juste>
+      </Reponse>
+      <Reponse>
+        <Numero>3</Numero>
+        <NumQuestion>1</NumQuestion>
+        <Intitule>Au revoir</Intitule>
+        <Juste>false</Juste>
+      </Reponse>
+      <Reponse>
+        <Numero>4</Numero>
+        <NumQuestion>1</NumQuestion>
+        <Intitule>Au revoi</Intitule>
+        <Juste>false</Juste>
+      </Reponse>
+    </Reponses>
+  </Question>
+</ArrayOfQuestion>

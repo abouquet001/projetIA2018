@@ -17,10 +17,17 @@ namespace Questionnaire_IA
         ///[STAThread]
         static void Main()
         {
+
+            StreamReader reader = new StreamReader("C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml");
+            List<Question> questions = (List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader);
+            reader.Close();
+            
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormQuestion());
 
+           
             /* Reponse rep1 = new Reponse();
              Reponse rep2 = new Reponse();
              List<Reponse> reps = new List<Reponse> { rep1, rep2 };
