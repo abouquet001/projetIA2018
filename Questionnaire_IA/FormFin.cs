@@ -22,7 +22,7 @@ namespace Questionnaire_IA
         private void Correction()
         {
             string ReponsesJustes;
-            for (int i = 0; i< lsQuestionPosee.Count; i++)
+            /*for (int i = 0; i< lsQuestionPosee.Count; i++)
             {
                 for (int j = 0; j < lsQuestionPosee.Reponse.Count; i++)
                 {
@@ -32,7 +32,7 @@ namespace Questionnaire_IA
                     }
                 }
                 lbl_correction.Text = lsQuestionPosee[i].Enonce + ": Réponse(s) = " + ReponsesJustes;
-            }
+            }*/
 
         }
 

@@ -50,7 +50,9 @@ namespace ConsoleApplication1
             };
             questions.Add(q1);
             XmlSerializer xs = new XmlSerializer(typeof(List<Question>));
-            using (StreamWriter wr = new StreamWriter("C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml"))
+            using (StreamWriter wr = new StreamWriter("E:\\Documents\\ENSC\\2A\\projetIA2018\\Questionnaire_IA\\questions.xml"))
+            //"C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml"
+            //E:\Documents\ENSC\2A\projetIA2018
             {
                 xs.Serialize(wr, questions);
             }

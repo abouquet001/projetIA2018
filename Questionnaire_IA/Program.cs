@@ -18,7 +18,8 @@ namespace Questionnaire_IA
         static void Main()
         {
 
-            StreamReader reader = new StreamReader("C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml");
+            StreamReader reader = new StreamReader("E:\\Documents\\ENSC\\2A\\projetIA2018\\Questionnaire_IA\\questions.xml");
+            //C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml
             List<Question> questions = (List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader);
             reader.Close();
             

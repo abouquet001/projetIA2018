@@ -8,3 +8,9 @@ C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\ConsoleApplication1\obj\Debug
 C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\Documents\ENSC\2A\projetIA2018\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\Documents\ENSC\2A\projetIA2018\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\Documents\ENSC\2A\projetIA2018\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\Documents\ENSC\2A\projetIA2018\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+E:\Documents\ENSC\2A\projetIA2018\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\Documents\ENSC\2A\projetIA2018\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
