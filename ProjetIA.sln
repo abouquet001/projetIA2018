@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire_IA", "Questionnaire_IA\Questionnaire_IA.csproj", "{E72E2430-E4E7-483E-B6E4-4CCE60EEEE7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{2BA5A906-2927-4B2D-A32D-57CBA25B1A56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Initialisation", "ConsoleApplication1\Initialisation.csproj", "{2BA5A906-2927-4B2D-A32D-57CBA25B1A56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
