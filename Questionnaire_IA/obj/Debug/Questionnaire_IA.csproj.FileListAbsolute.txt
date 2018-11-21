@@ -12,7 +12,6 @@ E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.Fo
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormQuestionnaire.resources
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.Properties.Resources.resources
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.csproj.GenerateResource.Cache
-E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.csproj.CoreCompileInputs.cache
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.pdb
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe.config
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe

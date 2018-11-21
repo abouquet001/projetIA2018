@@ -74,9 +74,19 @@ namespace Questionnaire_IA
         }
 
 
+        private void Annuler()
+        {
+            box_reponse1.Checked = false;
+            box_reponse2.Checked = false;
+            box_reponse3.Checked = false;
+            box_reponse4.Checked = false;
+        }
+
+
         private void QuestionSuivante()
         {
             InitializeQuestion();
+            Annuler();
         }
 
 
@@ -179,11 +189,9 @@ namespace Questionnaire_IA
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
-            box_reponse1.Checked = false;
-            box_reponse2.Checked = false;
-            box_reponse3.Checked = false;
-            box_reponse4.Checked = false;
+            Annuler();
         }
+
 
         private void btn_valider_Click(object sender, EventArgs e)
         {
