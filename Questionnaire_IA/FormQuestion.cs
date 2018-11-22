@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Xml;
-//using System.Xml.Serialization;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Questionnaire_IA
 {
@@ -21,6 +22,7 @@ namespace Questionnaire_IA
         List<Question> lsQuestion = new List<Question> { };
         List<Question> lsQuestionsPosees = new List<Question> { };
         List<bool> lsRepUser = new List<bool> { };
+        List<Reponse> lsRepJustes = new List<Reponse> { };
 
 
         public FormQuestion()
@@ -31,13 +33,13 @@ namespace Questionnaire_IA
 
         }
 
-
+       
         //Méthodes
 
         private void InitializeQuestion()
         {
             //Test
-            Reponse rep1 = new Reponse(1, 1, "La réponse A", true);
+            Reponse rep1 = new Reponse(1, 1, "La réponse A", false);
             Reponse rep2 = new Reponse(2, 1, "La réponse B", false);
             Reponse rep3 = new Reponse(3, 1, "Raiponce", true);
             Reponse rep4 = new Reponse(4, 1, "RIP", false);
@@ -53,9 +55,15 @@ namespace Questionnaire_IA
             Question q4 = new Question(4, "L’algorithme MinMax est utilisé :", lsRep);
             List<Question> lsQuest = new List<Question> { q1, q2, q3, q4 };
 
-
-            //CREER UNE NOUVELLE LISTE AVeC QUESTION POSEE !!
+            
             lbl_num_question.Text = "Question n° " + numeroQuestion + " :";
+
+            StreamReader reader = new StreamReader("E:\\Documents\\ENSC\\2A\\projetIA2018\\Questionnaire_IA\\questions.xml");
+            //C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml
+            List<Question> questions = (List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader);
+            reader.Close();
+
+            //lsQuestion = questions;
             lsQuestion = lsQuest;
             int k = R.Next(5); //un rang de plus que le nb total de questions
             if (k != 0)
@@ -88,6 +96,22 @@ namespace Questionnaire_IA
             InitializeQuestion();
             Annuler();
         }
+
+
+        private void InitializeRepJustes()
+        {
+            for(int i = 0; i < lsQuestionsPosees.Count; i++)
+            {
+                for(int j = 0; j < 4; j++)
+                {
+                    if (lsQuestionsPosees[i].Reponses[j].Juste == true)
+                    {
+                        lsRepJustes.Add(lsQuestionsPosees[i].Reponses[j]);
+                    }
+                }
+            }
+        }
+
 
 
         private bool Evaluation(List<Question> lsQuestion, int indice)
@@ -198,22 +222,26 @@ namespace Questionnaire_IA
             //quand l'user valide, il faut évaluer sa réponse, enregistrer l'évaluation, passer à la question suivante
             //Récupérer à quelle question on est 
             string intituleQuestion = lbl_intitule_question.Text;
+            bool resultat;
             
             for (int i = 0; i < lsQuestion.Count; i++)
             {
                 if (lsQuestion[i].Enonce == intituleQuestion)
                 {
-                    Evaluation(lsQuestion,i);
+                    resultat =  Evaluation(lsQuestion,i);
+                    Enregistrer(resultat);
                 }
             }
 
-            QuestionSuivante();
-
-            if (numeroQuestion == 5) //à modifier
+            if (numeroQuestion == 3) //à modifier
             {
-                FormFin form3 = new FormFin();
+                Noter(lsRepUser);
+                InitializeRepJustes();
+                FormFin form3 = new FormFin(lsQuestionsPosees,lsRepJustes);
                 form3.Show();
             }
+            
+            QuestionSuivante();
         }
 
         

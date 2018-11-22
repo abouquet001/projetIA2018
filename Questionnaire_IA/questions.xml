@@ -2,7 +2,7 @@
 <ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Question>
     <Numero>1</Numero>
-    <Enonce>Quel reponse veut dire bonjour ?</Enonce>
+    <Enonce>Quelle reponse veut dire bonjour ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -26,6 +26,36 @@
         <Numero>4</Numero>
         <NumQuestion>1</NumQuestion>
         <Intitule>Au revoi</Intitule>
+        <Juste>false</Juste>
+      </Reponse>
+    </Reponses>
+  </Question>
+  <Question>
+    <Numero>2</Numero>
+    <Enonce>Comment je m'appelle ?</Enonce>
+    <Reponses>
+      <Reponse>
+        <Numero>1</Numero>
+        <NumQuestion>2</NumQuestion>
+        <Intitule>Emma</Intitule>
+        <Juste>false</Juste>
+      </Reponse>
+      <Reponse>
+        <Numero>2</Numero>
+        <NumQuestion>2</NumQuestion>
+        <Intitule>Alice</Intitule>
+        <Juste>true</Juste>
+      </Reponse>
+      <Reponse>
+        <Numero>3</Numero>
+        <NumQuestion>2</NumQuestion>
+        <Intitule>Antoine</Intitule>
+        <Juste>false</Juste>
+      </Reponse>
+      <Reponse>
+        <Numero>4</Numero>
+        <NumQuestion>2</NumQuestion>
+        <Intitule>Katell</Intitule>
         <Juste>false</Juste>
       </Reponse>
     </Reponses>

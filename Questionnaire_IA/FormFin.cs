@@ -12,32 +12,37 @@ namespace Questionnaire_IA
 {
     public partial class FormFin : Form
     {
-        public FormFin()
+        public FormFin(List<Question> lsQuestionsPosees, List<Reponse> lsReponsesJustes)
         {
+         
             InitializeComponent();
+
+            //Affichage des questions/reponses dans le DataGridView
+            for (int i=0;i<lsQuestionsPosees.Count;i++)
+            {
+                tabCorrection.Rows.Add(lsQuestionsPosees[i].Enonce, lsReponsesJustes[i].Intitule);
+            }
+            
         }
+
 
         //Méthodes
 
-        private void Correction()
-        {
-            string ReponsesJustes;
-            /*for (int i = 0; i< lsQuestionPosee.Count; i++)
-            {
-                for (int j = 0; j < lsQuestionPosee.Reponse.Count; i++)
-                {
-                    if (lsQuestionPosee[i].Reponse[j].Juste == true)
-                    {
-                        ReponsesJustes += (" ; "+lsQuestionPosee[i].Reponse[i].Intitule);
-                    }
-                }
-                lbl_correction.Text = lsQuestionPosee[i].Enonce + ": Réponse(s) = " + ReponsesJustes;
-            }*/
 
-        }
 
 
         //Evènements
+
+
+        private void tab_correction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Ok_Click(object sender, EventArgs e)
+        {
+            //fermer les form
+        }
 
 
     }
