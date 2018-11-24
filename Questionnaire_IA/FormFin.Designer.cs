@@ -130,9 +130,6 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_titre_correction;
-        private System.Windows.Forms.DataGridView tab_correction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Question;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Réponses;
         private System.Windows.Forms.DataGridView tabCorrection;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuestions;
         private System.Windows.Forms.DataGridViewTextBoxColumn colReponses;

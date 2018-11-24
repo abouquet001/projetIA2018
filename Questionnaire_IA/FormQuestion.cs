@@ -64,8 +64,8 @@ namespace Questionnaire_IA
             reader.Close();
 
             //lsQuestion = questions;
-            lsQuestion = lsQuest;
-            int k = R.Next(5); //un rang de plus que le nb total de questions
+            lsQuestion = questions;
+            int k = R.Next(3); //un rang de plus que le nb total de questions
             if (k != 0)
             {
                 k = k - 1;
@@ -174,6 +174,65 @@ namespace Questionnaire_IA
             return correct;
         }
 
+        private bool Evaluation(Question questionPosee)
+        {
+            bool correct = true;
+            //CAS 1 : cocher une réponse fausse
+            if ((box_reponse1.Checked) && (questionPosee.Reponses[0].Juste == false))
+            {
+                correct = false;
+            }
+            if ((box_reponse2.Checked) && (questionPosee.Reponses[1].Juste == false))
+            {
+                correct = false;
+            }
+            if ((box_reponse3.Checked) && (questionPosee.Reponses[2].Juste == false))
+            {
+                correct = false;
+            }
+            if ((box_reponse4.Checked) && (questionPosee.Reponses[3].Juste == false))
+            {
+                correct = false;
+            }
+            //CAS 2 : ne rien cocher
+            if ((box_reponse1.Checked == false) && (box_reponse2.Checked == false) && (box_reponse3.Checked == false) && (box_reponse4.Checked == false))
+            {
+                correct = false;
+            }
+            //CAS 3 : ne pas cocher toutes les bonnes réponses
+            /*int nbReponsesJustes = 0;
+            for (int k = 0; k < lsQuestion.Count; k++)
+            {
+                for (int l = 0; l < 4; l++)
+                {
+                    if (lsQuestion[k].Reponses[l].Juste == true)
+                    {
+                        nbReponsesJustes++;
+                    }
+                }
+
+            }*/
+            if ((questionPosee.Reponses[0].Juste == true) && (box_reponse1.Checked == false))
+            {
+                correct = false;
+            }
+            if ((questionPosee.Reponses[1].Juste == true) && (box_reponse2.Checked == false))
+            {
+                correct = false;
+            }
+            if ((questionPosee.Reponses[2].Juste == true) && (box_reponse3.Checked == false))
+            {
+                correct = false;
+            }
+            if ((questionPosee.Reponses[3].Juste == true) && (box_reponse4.Checked == false))
+            {
+                correct = false;
+            }
+            //vérifiez que le nb de coché correspond au nb de réponses attendues ?
+
+            return correct;
+        }
+
 
         private void Enregistrer(bool resultat)
         {
@@ -185,7 +244,7 @@ namespace Questionnaire_IA
 
 
 
-        private void Noter(List<bool> _lsReponses)
+        private int Noter(List<bool> _lsReponses)
         {
             int noteFinale = 0;
             for (int k = 0; k < _lsReponses.Count; k++)
@@ -195,18 +254,11 @@ namespace Questionnaire_IA
                     noteFinale++;
                 }
             }
-            
+            return noteFinale;
         }
 
 
-
-        private void Correction()//dans autre forme du coup
-        {
-            //à la fin du questionnaire, affiche la correction des questions posées
-
-        }
-
-
+         
 
         //Evènements 
 
@@ -223,22 +275,30 @@ namespace Questionnaire_IA
             //Récupérer à quelle question on est 
             string intituleQuestion = lbl_intitule_question.Text;
             bool resultat;
-            
-            for (int i = 0; i < lsQuestion.Count; i++)
+            int note = 0;
+            /*for (int i = 0; i < lsQuestion.Count; i++)
             {
                 if (lsQuestion[i].Enonce == intituleQuestion)
                 {
                     resultat =  Evaluation(lsQuestion,i);
                     Enregistrer(resultat);
                 }
+            }*/
+            for (int i = 0; i < lsQuestionsPosees.Count; i++)
+            {
+                resultat = Evaluation(lsQuestionsPosees[i]);
+                Enregistrer(resultat);
+                label1.Text = "" + resultat;
             }
 
             if (numeroQuestion == 3) //à modifier
             {
-                Noter(lsRepUser);
+                note = Noter(lsRepUser);
+                label2.Text = "" + note;
                 InitializeRepJustes();
-                FormFin form3 = new FormFin(lsQuestionsPosees,lsRepJustes);
+                FormFin form3 = new FormFin(lsQuestionsPosees,lsRepJustes, lsRepUser, note);
                 form3.Show();
+                
             }
             
             QuestionSuivante();
