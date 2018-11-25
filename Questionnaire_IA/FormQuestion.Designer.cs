@@ -92,7 +92,7 @@
             // rbtn_reponse1
             // 
             this.rbtn_reponse1.AutoSize = true;
-            this.rbtn_reponse1.Location = new System.Drawing.Point(86, 206);
+            this.rbtn_reponse1.Location = new System.Drawing.Point(86, 215);
             this.rbtn_reponse1.Name = "rbtn_reponse1";
             this.rbtn_reponse1.Size = new System.Drawing.Size(89, 21);
             this.rbtn_reponse1.TabIndex = 13;
@@ -137,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(598, 599);
             this.Controls.Add(this.rbtn_reponse4);
             this.Controls.Add(this.rbtn_reponse3);

@@ -21,19 +21,17 @@ namespace Questionnaire_IA
         Random R = new Random(); //nombre aléatoire
         List<Question> lsQuestion = new List<Question> { }; //Liste des questions à poser
         List<Question> lsQuestionsPosees = new List<Question> { }; //Liste des questions réellement posées
-        //List<bool> lsRepUser = new List<bool> { };
-        List<Reponse> lsRepUser2 = new List<Reponse> { };
-        List<Reponse> lsRepJustes = new List<Reponse> { };
+        List<Reponse> lsRepUser = new List<Reponse> { }; //Liste des réponses données par l'opérateur
+        List<Reponse> lsRepJustes = new List<Reponse> { }; //Liste des réponses justes
 
         
 
         public FormQuestion()
         {
-            //Initialisation
+            //Initialisations
             InitializeComponent();
             lsQuestion = RecupererQuestions();
             InitializeQuestion();
-
         }
 
        
@@ -41,6 +39,7 @@ namespace Questionnaire_IA
 
         private List<Question> RecupererQuestions()
         {
+            //Fonction qui permet de récupérer la liste des questions à poser et qui la renvoie
             //Test
             Reponse rep1 = new Reponse(1, 1, "La réponse A", false);
             Reponse rep2 = new Reponse(2, 1, "La réponse B", false);
@@ -58,18 +57,19 @@ namespace Questionnaire_IA
             Question q4 = new Question(4, "L’algorithme MinMax est utilisé :", lsRep);
             List<Question> lsQuest = new List<Question> { q1, q2, q3, q4 };
             //Désérialisation
+            //StreamReader reader = new StreamReader("questions.xml");
             StreamReader reader = new StreamReader("E:\\Documents\\ENSC\\2A\\projetIA2018\\Questionnaire_IA\\questions.xml");
             //C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml
             List<Question> questions = (List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader);
             reader.Close();
             //retour
-            return lsQuest;
+            return questions;
         }
 
 
         private void InitializeQuestion()
         {
-                       
+            //Procédure qui permet d'initialiser la question à afficher 
             lbl_num_question.Text = "Question n° " + numeroQuestion + " :";
 
             int k = R.Next(lsQuestion.Count); //un rang de plus que le nb total de questions
@@ -91,6 +91,7 @@ namespace Questionnaire_IA
 
         private void Annuler()
         {
+            //Procédure qui permet de déselectionner tous les items 
             rbtn_reponse1.Checked = false;
             rbtn_reponse2.Checked = false;
             rbtn_reponse3.Checked = false;
@@ -100,13 +101,16 @@ namespace Questionnaire_IA
 
         private void QuestionSuivante()
         {
+            //Procédure pour afficher la question suivante
             InitializeQuestion();
             Annuler();
         }
 
 
         private void InitializeRepJustes()
-        {
+        { 
+            // Procédure qui permet de remplir la liste des réponses justes lsRepJustes
+            // avec les réponses justes associées aux questions posées
             for(int i = 0; i < lsQuestionsPosees.Count; i++)
             {
                 for(int j = 0; j < 4; j++)
@@ -120,188 +124,45 @@ namespace Questionnaire_IA
         }
 
 
-        /*
-        private bool Evaluation(List<Question> lsQuestion, int indice)
-        {
-            bool correct = true;
-            bool semiJuste = false;
-            //CAS 1 : cocher une réponse fausse
-            if ((box_reponse1.Checked)&&(lsQuestion[indice].Reponses[0].Juste == false))
-            {
-                correct = false;
-            }
-            if ((box_reponse2.Checked) && (lsQuestion[indice].Reponses[1].Juste == false))
-            {
-                correct = false;
-            }
-            if ((box_reponse3.Checked) && (lsQuestion[indice].Reponses[2].Juste == false))
-            {
-                correct = false;
-            }
-            if ((box_reponse4.Checked) && (lsQuestion[indice].Reponses[3].Juste == false))
-            {
-                correct = false;
-            }
-            //CAS 2 : ne rien cocher
-            if ((box_reponse1.Checked == false)&&(box_reponse2.Checked == false)&&(box_reponse3.Checked == false)&&(box_reponse4.Checked == false))
-            {
-                correct = false;
-            }
-            //CAS 3 : ne pas cocher toutes les bonnes réponses
-            /*int nbReponsesJustes = 0;
-            for (int k = 0; k < lsQuestion.Count; k++)
-            {
-                for (int l = 0; l < 4; l++)
-                {
-                    if (lsQuestion[k].Reponses[l].Juste == true)
-                    {
-                        nbReponsesJustes++;
-                    }
-                }
-
-            }
-            if ((lsQuestion[indice].Reponses[0].Juste == true)&&(box_reponse1.Checked == false))
-            {
-                correct = false;
-            }
-            if ((lsQuestion[indice].Reponses[1].Juste == true) && (box_reponse2.Checked == false))
-            {
-                correct = false;
-            }
-            if ((lsQuestion[indice].Reponses[2].Juste == true) && (box_reponse3.Checked == false))
-            {
-                correct = false;
-            }
-            if ((lsQuestion[indice].Reponses[3].Juste == true) && (box_reponse4.Checked == false))
-            {
-                correct = false;
-            }
-            //vérifiez que le nb de coché correspond au nb de réponses attendues ?
-            
-            return correct;
-        }*/
-
-
-            /*
-        private bool Evaluation(Question questionPosee)
-        {
-            bool correct = true;
-            //CAS 1 : cocher une réponse fausse
-            if ((box_reponse1.Checked) && (questionPosee.Reponses[0].Juste == false))
-            {
-                correct = false;
-            }
-            if ((box_reponse2.Checked) && (questionPosee.Reponses[1].Juste == false))
-            {
-                correct = false;
-            }
-            if ((box_reponse3.Checked) && (questionPosee.Reponses[2].Juste == false))
-            {
-                correct = false;
-            }
-            if ((box_reponse4.Checked) && (questionPosee.Reponses[3].Juste == false))
-            {
-                correct = false;
-            }
-            //CAS 2 : ne rien cocher
-            if ((box_reponse1.Checked == false) && (box_reponse2.Checked == false) && (box_reponse3.Checked == false) && (box_reponse4.Checked == false))
-            {
-                correct = false;
-            }
-            //CAS 3 : ne pas cocher toutes les bonnes réponses
-            /*int nbReponsesJustes = 0;
-            for (int k = 0; k < lsQuestion.Count; k++)
-            {
-                for (int l = 0; l < 4; l++)
-                {
-                    if (lsQuestion[k].Reponses[l].Juste == true)
-                    {
-                        nbReponsesJustes++;
-                    }
-                }
-
-            }
-            if ((questionPosee.Reponses[0].Juste == true) && (box_reponse1.Checked == false))
-            {
-                correct = false;
-            }
-            if ((questionPosee.Reponses[1].Juste == true) && (box_reponse2.Checked == false))
-            {
-                correct = false;
-            }
-            if ((questionPosee.Reponses[2].Juste == true) && (box_reponse3.Checked == false))
-            {
-                correct = false;
-            }
-            if ((questionPosee.Reponses[3].Juste == true) && (box_reponse4.Checked == false))
-            {
-                correct = false;
-            }
-            //vérifiez que le nb de coché correspond au nb de réponses attendues ?
-
-            return correct;
-        }*/
-
-
         private int Evaluation(Reponse ReponseUser, Reponse ReponseJuste, int note)
         {
+            //Fonction d'évaluation de la réponse de l'opérateur à la question posée
+            //Renvoie la note mise à jour
             if (ReponseUser == ReponseJuste)
             {
                 note++;
             }
             return note;
         }
-
-
+        
 
         private void Enregistrer(Question QuestionPosee)
         {
+            //Procédure qui permet de sauvegarder la réponse de l'opérateur dans la liste lsRepUser
             if(rbtn_reponse1.Checked)
             {
-                lsRepUser2.Add(QuestionPosee.Reponses[0]);
+                lsRepUser.Add(QuestionPosee.Reponses[0]);
             }
             if (rbtn_reponse2.Checked)
             {
-                lsRepUser2.Add(QuestionPosee.Reponses[1]);
+                lsRepUser.Add(QuestionPosee.Reponses[1]);
             }
             if (rbtn_reponse3.Checked)
             {
-                lsRepUser2.Add(QuestionPosee.Reponses[2]);
+                lsRepUser.Add(QuestionPosee.Reponses[2]);
             }
             if (rbtn_reponse4.Checked)
             {
-                lsRepUser2.Add(QuestionPosee.Reponses[3]);
+                lsRepUser.Add(QuestionPosee.Reponses[3]);
             }
+            //Si aucune réponse n'est sélectionnée, on attribue une réponse fausse pas défaut
             Reponse noReponse = new Reponse(1, QuestionPosee.Numero, "Vous n'avez pas répondu à cette question", false);
             if ((rbtn_reponse1.Checked == false)&& (rbtn_reponse2.Checked == false) && (rbtn_reponse3.Checked == false) && (rbtn_reponse4.Checked == false))
             {
-                lsRepUser2.Add(noReponse);
+                lsRepUser.Add(noReponse);
             }
         }
-
-        /*private void Enregistrer(bool resultat)
-        {
-            //en entree elle prend le résultat d'évaluation
-            // enregistre si la reponse à une question a été juste ou fausse
-            lsRepUser.Add(resultat);           
-        }*/
-
-
-            /*
-        private int Noter(List<bool> _lsReponses)
-        {
-            int noteFinale = 0;
-            for (int k = 0; k < _lsReponses.Count; k++)
-            {
-                if (_lsReponses[k] == true)
-                {
-                    noteFinale++;
-                }
-            }
-            return noteFinale;
-        }*/
-
-     
+           
 
 
         //Evènements 
@@ -309,48 +170,42 @@ namespace Questionnaire_IA
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
+            //Bouton qui permet de déselectionner chaque item
             Annuler();
         }
 
 
         private void btn_valider_Click(object sender, EventArgs e)
         {
-            //quand l'user valide, il faut évaluer sa réponse, enregistrer l'évaluation, passer à la question suivante
+            //Bouton qui permet d'évaluer la réponse de l'opérateur,
+            // d'enregistrer l'évaluation, de passer à la question suivante
+            // ou d'afficher la correction si les 20 questions sont passées
+
             //Récupérer à quelle question on est 
             string intituleQuestion = lbl_intitule_question.Text;
-            //bool resultat;
             int note = 0;
-            /*for (int i = 0; i < lsQuestion.Count; i++)
-            {
-                if (lsQuestion[i].Enonce == intituleQuestion)
-                {
-                    resultat =  Evaluation(lsQuestion,i);
-                    Enregistrer(resultat);
-                }
-            }*/ //premiere façon de faire
 
-            /* deuxième façon de faire
-            for (int i = 0; i < lsQuestionsPosees.Count; i++)
-            {
-                resultat = Evaluation(lsQuestionsPosees[i]);
-                Enregistrer(resultat);
-                label1.Text = "" + resultat;
-            }*/
-
+            //Enregistrer la réponse à la question en cours
             Enregistrer(lsQuestionsPosees.Last<Question>());
 
-            if (numeroQuestion == 5) //à modifier
+            //Si on a atteint le nombre de questions voulu (ici 20)
+            if (numeroQuestion == 21) //à modifier
             {
-                InitializeRepJustes();
+                InitializeRepJustes(); // Récupération des réponses justes
                 for (int n = 0; n < lsQuestionsPosees.Count; n++)
                 {
-                    note = Evaluation(lsRepUser2[n], lsRepJustes[n], note);
+                    note = Evaluation(lsRepUser[n], lsRepJustes[n], note); //Notation de l'opérateur
                 }
-                FormFin form3 = new FormFin(lsQuestionsPosees, lsRepJustes, lsRepUser2, note);
+                //Affichage du formulaire de correction
+                FormFin form3 = new FormFin(lsQuestionsPosees, lsRepJustes, lsRepUser, note);
                 form3.Show();
+                //Possibilité de quitter
                 btn_quit.Show();
                 btn_annuler.Enabled = false;
-
+                rbtn_reponse1.Enabled = false;
+                rbtn_reponse2.Enabled = false;
+                rbtn_reponse3.Enabled = false;
+                rbtn_reponse4.Enabled = false;
             }
             else
             {
@@ -361,6 +216,7 @@ namespace Questionnaire_IA
 
         private void btn_quit_Click(object sender, EventArgs e)
         {
+            //Fermeture du formulaire
             Form.ActiveForm.Close();
         }
     }

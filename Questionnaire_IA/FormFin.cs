@@ -14,6 +14,7 @@ namespace Questionnaire_IA
     {
         public FormFin(List<Question> lsQuestionsPosees, List<Reponse> lsReponsesJustes, List<Reponse> lsReponsesDonnees, int note)
         {
+            //Initialisations
             InitializeComponent();
             Correction(lsQuestionsPosees, lsReponsesJustes, lsReponsesDonnees);
             AffichageNote(note);            
@@ -33,17 +34,17 @@ namespace Questionnaire_IA
 
         public void AffichageNote(int note)
         {
+            //Affichage de la note
             lblNote2.Text = "" + note + " /20";
         }
 
 
 
         //Evènements
-
-
+        
         private void btn_Ok_Click(object sender, EventArgs e)
         {
-            //fermer les form
+            //Fermeture du formulaire
             Form.ActiveForm.Close();
             
         }

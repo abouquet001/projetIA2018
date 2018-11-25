@@ -71,8 +71,7 @@
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>3</NumQuestion>
-        <Intitule>Une action qu’un robot ne peut pas effectuer dans 
-        un cas précis</Intitule>
+        <Intitule>Une action qu’un robot ne peut pas effectuer dans un cas précis</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
@@ -84,8 +83,7 @@
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>3</NumQuestion>
-        <Intitule>Un objet facile à reconnaître qui sert de point de 
-        repérage au robot lors de ces déplacements </Intitule>
+        <Intitule>Un objet facile à reconnaître qui sert de point de repérage au robot lors de ces déplacements </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
@@ -100,8 +98,7 @@
   
  <Question>
     <Numero>4</Numero>
-    <Enonce>Combien de degré de liberté sont nécessaires à un robot pour 
-    prendre un objet ?</Enonce>
+    <Enonce>Combien de degré de liberté sont nécessaires à un robot pour prendre un objet ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -139,29 +136,29 @@
         <Numero>1</Numero>
         <NumQuestion>5</NumQuestion>
         <Intitule>Une intelligence artificielle peut être autant consciente et 
-        intelligente que l’Homme</Intitule>
+intelligente que l’Homme</Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>5</NumQuestion>
         <Intitule>Une intelligence artificielle ne peut pas être consciente et 
-        intelligente comme l’Homme</Intitule>
+intelligente comme l’Homme</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>5</NumQuestion>
         <Intitule>Une intelligence artificielle peut être plus intelligente que 
-        l’Homme</Intitule>
+l’Homme</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>4</Numero>
         <NumQuestion>5</NumQuestion>
         <Intitule>Une intelligence artificielle peut en théorie être consciente 
-        et avoir une intelligence semblable à celle de l’Homme mais en pratique, 
-        cela n’est pas concevable</Intitule>
+et avoir une intelligence semblable à celle de l’Homme mais en pratique, 
+cela n’est pas concevable</Intitule>
         <Juste>false</Juste>
       </Reponse>
     </Reponses>
@@ -182,7 +179,7 @@
         <Numero>2</Numero>
         <NumQuestion>6</NumQuestion>
         <Intitule>Il permet de déterminer la liste des coups possibles 
-        à partir de la liste des états atteignables </Intitule>
+à partir de la liste des états atteignables </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
@@ -364,7 +361,7 @@
 <Question>
     <Numero>12</Numero>
     <Enonce>Qu’est-ce qui caractérise une exploration en parcours en largeur 
-    lors d’une résolution générale des problèmes ?</Enonce>
+lors d’une résolution générale des problèmes ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -397,7 +394,7 @@
   <Question>
     <Numero>13</Numero>
     <Enonce>Quel algorithme permet de trouver le plus court chemin entre un 
-    état initial et un état final ? </Enonce>
+état initial et un état final ? </Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -447,7 +444,7 @@
         <Numero>3</Numero>
         <NumQuestion>14</NumQuestion>
         <Intitule>Atteindre chaque état de l’espace d’états demande 
-        un temps conséquent</Intitule>
+un temps conséquent</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
@@ -495,7 +492,7 @@
 <Question>
     <Numero>16</Numero>
     <Enonce>On cherche à trouver le chemin le plus court entre Toulouse et Le Mans 
-    à vol d’oiseau. Quel algorithme doit-on utiliser pour répondre à cette information ?</Enonce>
+à vol d’oiseau. Quel algorithme doit-on utiliser pour répondre à cette information ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -527,34 +524,34 @@
 
   <Question>
     <Numero>17</Numero>
-    <Enonce>Quelle est la propriété vrai pour l’algorithme A* ?</Enonce>
+    <Enonce>Quelle est la propriété vraie pour l’algorithme A* ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>17</NumQuestion>
         <Intitule>Si l’heuristique choisie est un majorant du coût du chemin 
-        restant réel, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
+restant réel, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>17</NumQuestion>
         <Intitule>Si l’heuristique choisie est un minorant du coût du chemin 
-        restant réel, alors A* garantit que le chemin trouvé est le plus court. </Intitule>
+restant réel, alors A* garantit que le chemin trouvé est le plus court. </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>17</NumQuestion>
         <Intitule>Si l’heuristique choisie est un majorant du coût du chemin 
-        parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
+parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>4</Numero>
         <NumQuestion>17</NumQuestion>
         <Intitule>Si l’heuristique choisie est un minorant du coût du chemin 
-        parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
+parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
         <Juste>false</Juste>
       </Reponse>
     </Reponses>
@@ -568,15 +565,13 @@
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>18</NumQuestion>
-        <Intitule>Une recherche de chemin le plus court entre deux états 
-        d’un graphe d’espace d’états</Intitule>
+        <Intitule>Une recherche de chemin le plus court entre deux états d’un graphe d’espace d’états</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>18</NumQuestion>
-        <Intitule>La détermination de l’ensemble des états atteignables 
-        à partir d’un moment donné</Intitule>
+        <Intitule>La détermination de l’ensemble des états atteignables à partir d’un moment donné</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
@@ -630,18 +625,12 @@
   
   <Question>
     <Numero>20</Numero>
-    <Enonce>On cherche à trouver le chemin le plus court entre Toulouse 
-    et Le Mans à vol d’oiseau. On dispose des données suivantes  : 
-    Distance Toulouse - Bordeaux par la route = 245 km
-    Distance Toulouse - Clermont-Ferrand par la route = 376 km 
-    Distance Toulouse - Paris par la route = 681 km
-    Distance Toulouse - Marseille par la route = 404 km
-    Distance Toulouse - Le Mans par la route = 686 km
-    Distance Bordeaux - Le Mans à vol d’oiseau = 357 km
-    Distance Clermont-Ferrand - Le Mans à vol d’oiseau = 330 km
-    Distance Paris - Le Mans à vol d’oiseau = 185 km
-    Distance Marseille - Le Mans à vol d’oiseau = 660 km
-    Distance Toulouse - Le Mans à vol d’oiseau = 499 km
+    <Enonce>On cherche à trouver le chemin le plus court entre Toulouse et Le Mans à vol d’oiseau. On dispose des données suivantes  : 
+    Distance Toulouse - Bordeaux par la route = 245 km  |    Distance Toulouse - Clermont-Ferrand par la route = 376 km 
+    Distance Toulouse - Paris par la route = 681 km  |   Distance Toulouse - Marseille par la route = 404 km   
+    Distance Toulouse - Le Mans par la route = 686 km   |    Distance Bordeaux - Le Mans à vol d’oiseau = 357 km   
+    Distance Clermont-Ferrand - Le Mans à vol d’oiseau = 330 km   |    Distance Paris - Le Mans à vol d’oiseau = 185 km    
+    Distance Marseille - Le Mans à vol d’oiseau = 660 km    |    Distance Toulouse - Le Mans à vol d’oiseau = 499 km   
     Par quelle ville faut-il passer ?
     </Enonce>
     <Reponses>
@@ -691,8 +680,7 @@
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>21</NumQuestion>
-        <Intitule>Existe une affectation de ses variables qui vérifie 
-        toutes ses contraintes </Intitule>
+        <Intitule>Existe une affectation de ses variables qui vérifie toutes ses contraintes </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
@@ -740,7 +728,7 @@
   <Question>
     <Numero>23</Numero>
     <Enonce>Parmi ces différentes réponses, laquelle ne représente pas 
-    une difficulté pour le traitement automatique du langage naturel ?</Enonce>
+une difficulté pour le traitement automatique du langage naturel ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
