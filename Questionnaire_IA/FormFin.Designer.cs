@@ -35,6 +35,7 @@
             this.lblNote = new System.Windows.Forms.Label();
             this.lblNote2 = new System.Windows.Forms.Label();
             this.btn_Ok = new System.Windows.Forms.Button();
+            this.Reponses_Donnees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabCorrection)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.tabCorrection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabCorrection.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colQuestions,
-            this.colReponses});
+            this.colReponses,
+            this.Reponses_Donnees});
             this.tabCorrection.Location = new System.Drawing.Point(49, 85);
             this.tabCorrection.Name = "tabCorrection";
             this.tabCorrection.ReadOnly = true;
@@ -109,6 +111,13 @@
             this.btn_Ok.UseVisualStyleBackColor = true;
             this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
+            // Reponses_Donnees
+            // 
+            this.Reponses_Donnees.HeaderText = "Reponses_Données";
+            this.Reponses_Donnees.Name = "Reponses_Donnees";
+            this.Reponses_Donnees.ReadOnly = true;
+            this.Reponses_Donnees.Width = 166;
+            // 
             // FormFin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,5 +145,6 @@
         private System.Windows.Forms.Label lblNote;
         private System.Windows.Forms.Label lblNote2;
         private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reponses_Donnees;
     }
 }

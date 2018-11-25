@@ -12,22 +12,22 @@ namespace Questionnaire_IA
 {
     public partial class FormFin : Form
     {
-        public FormFin(List<Question> lsQuestionsPosees, List<Reponse> lsReponsesJustes, List<bool> lsReponsesDonnees, int note)
+        public FormFin(List<Question> lsQuestionsPosees, List<Reponse> lsReponsesJustes, List<Reponse> lsReponsesDonnees, int note)
         {
             InitializeComponent();
-            Correction(lsQuestionsPosees, lsReponsesJustes);
+            Correction(lsQuestionsPosees, lsReponsesJustes, lsReponsesDonnees);
             AffichageNote(note);            
         }
 
 
         //Méthodes
 
-        public void Correction(List<Question> lsQuestions, List<Reponse> lsReponses)
+        public void Correction(List<Question> lsQuestions, List<Reponse> lsReponses, List<Reponse> lsReponsesDonnees)
         {
             //Affichage des questions/reponses dans le DataGridView
             for (int i = 0; i < lsQuestions.Count; i++)
             {
-                tabCorrection.Rows.Add(lsQuestions[i].Enonce, lsReponses[i].Intitule);
+                tabCorrection.Rows.Add(lsQuestions[i].Enonce, lsReponses[i].Intitule, lsReponsesDonnees[i].Intitule);
             }
         }
 

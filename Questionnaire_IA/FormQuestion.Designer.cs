@@ -30,14 +30,13 @@
         {
             this.lbl_num_question = new System.Windows.Forms.Label();
             this.btn_valider = new System.Windows.Forms.Button();
-            this.box_reponse1 = new System.Windows.Forms.CheckBox();
             this.lbl_intitule_question = new System.Windows.Forms.Label();
-            this.box_reponse2 = new System.Windows.Forms.CheckBox();
-            this.box_reponse3 = new System.Windows.Forms.CheckBox();
-            this.box_reponse4 = new System.Windows.Forms.CheckBox();
             this.btn_annuler = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_quit = new System.Windows.Forms.Button();
+            this.rbtn_reponse1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_reponse2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_reponse3 = new System.Windows.Forms.RadioButton();
+            this.rbtn_reponse4 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lbl_num_question
@@ -60,16 +59,6 @@
             this.btn_valider.UseVisualStyleBackColor = true;
             this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
-            // box_reponse1
-            // 
-            this.box_reponse1.AutoSize = true;
-            this.box_reponse1.Location = new System.Drawing.Point(65, 202);
-            this.box_reponse1.Name = "box_reponse1";
-            this.box_reponse1.Size = new System.Drawing.Size(90, 21);
-            this.box_reponse1.TabIndex = 6;
-            this.box_reponse1.Text = "reponse1";
-            this.box_reponse1.UseVisualStyleBackColor = true;
-            // 
             // lbl_intitule_question
             // 
             this.lbl_intitule_question.AutoSize = true;
@@ -78,36 +67,6 @@
             this.lbl_intitule_question.Size = new System.Drawing.Size(142, 17);
             this.lbl_intitule_question.TabIndex = 7;
             this.lbl_intitule_question.Text = "Intitulé de la question";
-            // 
-            // box_reponse2
-            // 
-            this.box_reponse2.AutoSize = true;
-            this.box_reponse2.Location = new System.Drawing.Point(65, 275);
-            this.box_reponse2.Name = "box_reponse2";
-            this.box_reponse2.Size = new System.Drawing.Size(90, 21);
-            this.box_reponse2.TabIndex = 8;
-            this.box_reponse2.Text = "reponse2";
-            this.box_reponse2.UseVisualStyleBackColor = true;
-            // 
-            // box_reponse3
-            // 
-            this.box_reponse3.AutoSize = true;
-            this.box_reponse3.Location = new System.Drawing.Point(65, 346);
-            this.box_reponse3.Name = "box_reponse3";
-            this.box_reponse3.Size = new System.Drawing.Size(90, 21);
-            this.box_reponse3.TabIndex = 9;
-            this.box_reponse3.Text = "reponse3";
-            this.box_reponse3.UseVisualStyleBackColor = true;
-            // 
-            // box_reponse4
-            // 
-            this.box_reponse4.AutoSize = true;
-            this.box_reponse4.Location = new System.Drawing.Point(65, 416);
-            this.box_reponse4.Name = "box_reponse4";
-            this.box_reponse4.Size = new System.Drawing.Size(90, 21);
-            this.box_reponse4.TabIndex = 10;
-            this.box_reponse4.Text = "reponse4";
-            this.box_reponse4.UseVisualStyleBackColor = true;
             // 
             // btn_annuler
             // 
@@ -119,37 +78,73 @@
             this.btn_annuler.UseVisualStyleBackColor = true;
             this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
-            // label1
+            // btn_quit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(322, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.btn_quit.Location = new System.Drawing.Point(384, 550);
+            this.btn_quit.Name = "btn_quit";
+            this.btn_quit.Size = new System.Drawing.Size(115, 37);
+            this.btn_quit.TabIndex = 12;
+            this.btn_quit.Text = "Quitter";
+            this.btn_quit.UseVisualStyleBackColor = true;
+            this.btn_quit.Visible = false;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
             // 
-            // label2
+            // rbtn_reponse1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(444, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "label2";
+            this.rbtn_reponse1.AutoSize = true;
+            this.rbtn_reponse1.Location = new System.Drawing.Point(86, 206);
+            this.rbtn_reponse1.Name = "rbtn_reponse1";
+            this.rbtn_reponse1.Size = new System.Drawing.Size(89, 21);
+            this.rbtn_reponse1.TabIndex = 13;
+            this.rbtn_reponse1.TabStop = true;
+            this.rbtn_reponse1.Text = "reponse1";
+            this.rbtn_reponse1.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_reponse2
+            // 
+            this.rbtn_reponse2.AutoSize = true;
+            this.rbtn_reponse2.Location = new System.Drawing.Point(86, 279);
+            this.rbtn_reponse2.Name = "rbtn_reponse2";
+            this.rbtn_reponse2.Size = new System.Drawing.Size(89, 21);
+            this.rbtn_reponse2.TabIndex = 14;
+            this.rbtn_reponse2.TabStop = true;
+            this.rbtn_reponse2.Text = "reponse2";
+            this.rbtn_reponse2.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_reponse3
+            // 
+            this.rbtn_reponse3.AutoSize = true;
+            this.rbtn_reponse3.Location = new System.Drawing.Point(86, 350);
+            this.rbtn_reponse3.Name = "rbtn_reponse3";
+            this.rbtn_reponse3.Size = new System.Drawing.Size(89, 21);
+            this.rbtn_reponse3.TabIndex = 15;
+            this.rbtn_reponse3.TabStop = true;
+            this.rbtn_reponse3.Text = "reponse3";
+            this.rbtn_reponse3.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_reponse4
+            // 
+            this.rbtn_reponse4.AutoSize = true;
+            this.rbtn_reponse4.Location = new System.Drawing.Point(86, 420);
+            this.rbtn_reponse4.Name = "rbtn_reponse4";
+            this.rbtn_reponse4.Size = new System.Drawing.Size(89, 21);
+            this.rbtn_reponse4.TabIndex = 16;
+            this.rbtn_reponse4.TabStop = true;
+            this.rbtn_reponse4.Text = "reponse4";
+            this.rbtn_reponse4.UseVisualStyleBackColor = true;
             // 
             // FormQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 599);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rbtn_reponse4);
+            this.Controls.Add(this.rbtn_reponse3);
+            this.Controls.Add(this.rbtn_reponse2);
+            this.Controls.Add(this.rbtn_reponse1);
+            this.Controls.Add(this.btn_quit);
             this.Controls.Add(this.btn_annuler);
-            this.Controls.Add(this.box_reponse4);
-            this.Controls.Add(this.box_reponse3);
-            this.Controls.Add(this.box_reponse2);
             this.Controls.Add(this.lbl_intitule_question);
-            this.Controls.Add(this.box_reponse1);
             this.Controls.Add(this.btn_valider);
             this.Controls.Add(this.lbl_num_question);
             this.Name = "FormQuestion";
@@ -163,13 +158,12 @@
 
         private System.Windows.Forms.Label lbl_num_question;
         private System.Windows.Forms.Button btn_valider;
-        private System.Windows.Forms.CheckBox box_reponse1;
         private System.Windows.Forms.Label lbl_intitule_question;
-        private System.Windows.Forms.CheckBox box_reponse2;
-        private System.Windows.Forms.CheckBox box_reponse3;
-        private System.Windows.Forms.CheckBox box_reponse4;
         private System.Windows.Forms.Button btn_annuler;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_quit;
+        private System.Windows.Forms.RadioButton rbtn_reponse1;
+        private System.Windows.Forms.RadioButton rbtn_reponse2;
+        private System.Windows.Forms.RadioButton rbtn_reponse3;
+        private System.Windows.Forms.RadioButton rbtn_reponse4;
     }
 }

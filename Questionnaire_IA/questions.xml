@@ -71,7 +71,8 @@
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>3</NumQuestion>
-        <Intitule>Une action qu’un robot ne peut pas effectuer dans un cas précis</Intitule>
+        <Intitule>Une action qu’un robot ne peut pas effectuer dans 
+        un cas précis</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
@@ -83,7 +84,8 @@
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>3</NumQuestion>
-        <Intitule>Un objet facile à reconnaître qui sert de point de repérage au robot lors de ces déplacements </Intitule>
+        <Intitule>Un objet facile à reconnaître qui sert de point de 
+        repérage au robot lors de ces déplacements </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
@@ -98,7 +100,8 @@
   
  <Question>
     <Numero>4</Numero>
-    <Enonce>Combien de degré de liberté sont nécessaires à un robot pour prendre un objet ?</Enonce>
+    <Enonce>Combien de degré de liberté sont nécessaires à un robot pour 
+    prendre un objet ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -135,25 +138,30 @@
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>5</NumQuestion>
-        <Intitule>Une intelligence artificielle peut être autant consciente et intelligente que l’Homme</Intitule>
+        <Intitule>Une intelligence artificielle peut être autant consciente et 
+        intelligente que l’Homme</Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>5</NumQuestion>
-        <Intitule>Une intelligence artificielle ne peut pas être consciente et intelligente comme l’Homme</Intitule>
+        <Intitule>Une intelligence artificielle ne peut pas être consciente et 
+        intelligente comme l’Homme</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>5</NumQuestion>
-        <Intitule>Une intelligence artificielle peut être plus intelligente que l’Homme</Intitule>
+        <Intitule>Une intelligence artificielle peut être plus intelligente que 
+        l’Homme</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>4</Numero>
         <NumQuestion>5</NumQuestion>
-        <Intitule>Une intelligence artificielle peut en théorie être consciente et avoir une intelligence semblable à celle de l’Homme mais en pratique, cela n’est pas concevable</Intitule>
+        <Intitule>Une intelligence artificielle peut en théorie être consciente 
+        et avoir une intelligence semblable à celle de l’Homme mais en pratique, 
+        cela n’est pas concevable</Intitule>
         <Juste>false</Juste>
       </Reponse>
     </Reponses>
@@ -173,7 +181,8 @@
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>6</NumQuestion>
-        <Intitule>Il permet de déterminer la liste des coups possibles à partir de la liste des états atteignables </Intitule>
+        <Intitule>Il permet de déterminer la liste des coups possibles 
+        à partir de la liste des états atteignables </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
@@ -281,7 +290,8 @@
       <Reponse>
         <Numero>4</Numero>
         <NumQuestion>9</NumQuestion>
-        <Intitule>Alpha-bêta permet de réduire le nombre de branches à développer</Intitule>
+        <Intitule>Alpha-bêta permet de réduire le nombre de branches 
+        à développer</Intitule>
         <Juste>true</Juste>
       </Reponse>
     </Reponses>
@@ -353,7 +363,8 @@
 
 <Question>
     <Numero>12</Numero>
-    <Enonce>Qu’est-ce qui caractérise une exploration en parcours en largeur lors d’une résolution générale des problèmes ?</Enonce>
+    <Enonce>Qu’est-ce qui caractérise une exploration en parcours en largeur 
+    lors d’une résolution générale des problèmes ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -385,7 +396,8 @@
 
   <Question>
     <Numero>13</Numero>
-    <Enonce>Quel algorithme permet de trouver le plus court chemin entre un état initial et un état final ? </Enonce>
+    <Enonce>Quel algorithme permet de trouver le plus court chemin entre un 
+    état initial et un état final ? </Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -434,7 +446,8 @@
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>14</NumQuestion>
-        <Intitule>Atteindre chaque état de l’espace d’états demande un temps conséquent</Intitule>
+        <Intitule>Atteindre chaque état de l’espace d’états demande 
+        un temps conséquent</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
@@ -481,7 +494,8 @@
 
 <Question>
     <Numero>16</Numero>
-    <Enonce>On cherche à trouver le chemin le plus court entre Toulouse et Le Mans à vol d’oiseau. Quel algorithme doit-on utiliser pour répondre à cette information ?</Enonce>
+    <Enonce>On cherche à trouver le chemin le plus court entre Toulouse et Le Mans 
+    à vol d’oiseau. Quel algorithme doit-on utiliser pour répondre à cette information ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
@@ -518,25 +532,29 @@
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>17</NumQuestion>
-        <Intitule>Si l’heuristique choisie est un majorant du coût du chemin restant réel, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
+        <Intitule>Si l’heuristique choisie est un majorant du coût du chemin 
+        restant réel, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>17</NumQuestion>
-        <Intitule>Si l’heuristique choisie est un minorant du coût du chemin restant réel, alors A* garantit que le chemin trouvé est le plus court. </Intitule>
+        <Intitule>Si l’heuristique choisie est un minorant du coût du chemin 
+        restant réel, alors A* garantit que le chemin trouvé est le plus court. </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>17</NumQuestion>
-        <Intitule>Si l’heuristique choisie est un majorant du coût du chemin parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
+        <Intitule>Si l’heuristique choisie est un majorant du coût du chemin 
+        parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>4</Numero>
         <NumQuestion>17</NumQuestion>
-        <Intitule>Si l’heuristique choisie est un minorant du coût du chemin parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
+        <Intitule>Si l’heuristique choisie est un minorant du coût du chemin 
+        parcouru, alors A* garantit que le chemin trouvé est le plus court.</Intitule>
         <Juste>false</Juste>
       </Reponse>
     </Reponses>
@@ -550,13 +568,15 @@
       <Reponse>
         <Numero>1</Numero>
         <NumQuestion>18</NumQuestion>
-        <Intitule>Une recherche de chemin le plus court entre deux états d’un graphe d’espace d’états</Intitule>
+        <Intitule>Une recherche de chemin le plus court entre deux états 
+        d’un graphe d’espace d’états</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
         <Numero>2</Numero>
         <NumQuestion>18</NumQuestion>
-        <Intitule>La détermination de l’ensemble des états atteignables à partir d’un moment donné</Intitule>
+        <Intitule>La détermination de l’ensemble des états atteignables 
+        à partir d’un moment donné</Intitule>
         <Juste>false</Juste>
       </Reponse>
       <Reponse>
@@ -600,7 +620,8 @@
       <Reponse>
         <Numero>4</Numero>
         <NumQuestion>19</NumQuestion>
-        <Intitule>Une recherche de chemin le plus court entre deux états d’un graphe d’espace d’états</Intitule>
+        <Intitule>Une recherche de chemin le plus court entre deux états 
+        d’un graphe d’espace d’états</Intitule>
         <Juste>false</Juste>
       </Reponse>
     </Reponses>
@@ -609,7 +630,8 @@
   
   <Question>
     <Numero>20</Numero>
-    <Enonce>On cherche à trouver le chemin le plus court entre Toulouse et Le Mans à vol d’oiseau. On dispose des données suivantes  : 
+    <Enonce>On cherche à trouver le chemin le plus court entre Toulouse 
+    et Le Mans à vol d’oiseau. On dispose des données suivantes  : 
     Distance Toulouse - Bordeaux par la route = 245 km
     Distance Toulouse - Clermont-Ferrand par la route = 376 km 
     Distance Toulouse - Paris par la route = 681 km
@@ -669,7 +691,8 @@
       <Reponse>
         <Numero>3</Numero>
         <NumQuestion>21</NumQuestion>
-        <Intitule>Existe une affectation de ses variables qui vérifie toutes ses contraintes </Intitule>
+        <Intitule>Existe une affectation de ses variables qui vérifie 
+        toutes ses contraintes </Intitule>
         <Juste>true</Juste>
       </Reponse>
       <Reponse>
@@ -716,7 +739,8 @@
   
   <Question>
     <Numero>23</Numero>
-    <Enonce>Parmi ces différentes réponses, laquelle ne représente pas une difficulté pour le traitement automatique du langage naturel ?</Enonce>
+    <Enonce>Parmi ces différentes réponses, laquelle ne représente pas 
+    une difficulté pour le traitement automatique du langage naturel ?</Enonce>
     <Reponses>
       <Reponse>
         <Numero>1</Numero>
