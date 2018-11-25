@@ -12,10 +12,7 @@ namespace Questionnaire_IA
 {
     public partial class FormQuestionnaire : Form
     {
-        // Déclarations
-
-        //List<Eleve>
-
+          
         public FormQuestionnaire()
         {
             InitializeComponent();
@@ -24,11 +21,19 @@ namespace Questionnaire_IA
 
         // Evènements
 
-        private void btn_save_Click(object sender, EventArgs e)
+        private void btn_start_Click(object sender, EventArgs e)
         {
-
+            //Affichage du formulaire des questions
             FormQuestion form2 = new FormQuestion();
             form2.Show();
+            btn_start.Enabled = false;
+            btn_stop.Show();
+        }
+
+        private void btn_stop_Click(object sender, EventArgs e)
+        {
+            //Fermeture du formulaire
+            Form.ActiveForm.Close();
         }
     }
 }

@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbl_info.Text" xml:space="preserve">
+    <value>Lors du test qui va suivre, 20 questions vous seront posées sous forme de QCM. 
+Une et une seule réponse est acceptée par question. 
+Ne pas répondre est considéré comme une mauvaise réponse.
+
+A la fin du questionnaire, un récapitulatif des questions, vos réponses 
+et la correction vous seront affichés en plus de votre note.</value>
+  </data>
 </root>

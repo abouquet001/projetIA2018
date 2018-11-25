@@ -20,7 +20,7 @@ namespace Questionnaire_IA
             //Lancement du formulaire
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQuestion());
+            Application.Run(new FormQuestionnaire());
 
         }
     }

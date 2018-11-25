@@ -40,26 +40,9 @@ namespace Questionnaire_IA
         private List<Question> RecupererQuestions()
         {
             //Fonction qui permet de récupérer la liste des questions à poser et qui la renvoie
-            //Test
-            Reponse rep1 = new Reponse(1, 1, "La réponse A", false);
-            Reponse rep2 = new Reponse(2, 1, "La réponse B", false);
-            Reponse rep3 = new Reponse(3, 1, "Raiponce", true);
-            Reponse rep4 = new Reponse(4, 1, "RIP", false);
-            List<Reponse> reptiles = new List<Reponse> { rep1, rep2, rep3, rep4 };
-            Question q1 = new Question(1, "La question 1", reptiles);
-            Question q2 = new Question(2, "La question 2", reptiles);
-            Question q3 = new Question(3, "La question 3", reptiles);
-            Reponse repA = new Reponse(1, 4, "A.en I.A. pour jouer à deux contre un adversaire.", false);
-            Reponse repB = new Reponse(2, 4, "B.en I.A.pour trouver le plus court chemin dans un graphe.", true);
-            Reponse repC = new Reponse(3, 4, "C.en reconnaissance des formes pour détecter un isomorphisme de graphe.", false);
-            Reponse repD = new Reponse(4, 4, "D.pour la détection de contours en vision par ordinateur", false);
-            List<Reponse> lsRep = new List<Reponse> { repA, repB, repC, repD };
-            Question q4 = new Question(4, "L’algorithme MinMax est utilisé :", lsRep);
-            List<Question> lsQuest = new List<Question> { q1, q2, q3, q4 };
+            
             //Désérialisation
-            //StreamReader reader = new StreamReader("questions.xml");
-            StreamReader reader = new StreamReader("E:\\Documents\\ENSC\\2A\\projetIA2018\\Questionnaire_IA\\questions.xml");
-            //C:\\Users\\Antoine\\Documents\\ENSC\\2A\\IA\\ProjetIA2018\\Questionnaire_IA\\questions.xml
+            StreamReader reader = new StreamReader("..\\..\\questions.xml");
             List<Question> questions = (List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader);
             reader.Close();
             //retour
