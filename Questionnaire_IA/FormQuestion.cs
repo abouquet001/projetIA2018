@@ -171,8 +171,8 @@ namespace Questionnaire_IA
             //Enregistrer la réponse à la question en cours
             Enregistrer(lsQuestionsPosees.Last<Question>());
 
-            //Si on a atteint le nombre de questions voulu (ici 20)
-            if (numeroQuestion == 21) //à modifier
+            //Si on a atteint le nombre de questions voulu (ici 20 pour 20 questions à 1 point)
+            if (numeroQuestion == 17) 
             {
                 InitializeRepJustes(); // Récupération des réponses justes
                 for (int n = 0; n < lsQuestionsPosees.Count; n++)
