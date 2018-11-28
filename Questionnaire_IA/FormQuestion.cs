@@ -172,7 +172,7 @@ namespace Questionnaire_IA
             Enregistrer(lsQuestionsPosees.Last<Question>());
 
             //Si on a atteint le nombre de questions voulu (ici 20)
-            if (numeroQuestion == 21) //à modifier
+            if (numeroQuestion == 18) //à modifier
             {
                 InitializeRepJustes(); // Récupération des réponses justes
                 for (int n = 0; n < lsQuestionsPosees.Count; n++)
@@ -180,10 +180,13 @@ namespace Questionnaire_IA
                     note = Evaluation(lsRepUser[n], lsRepJustes[n], note); //Notation de l'opérateur
                 }
                 //Affichage du formulaire de correction
-                FormFin form3 = new FormFin(lsQuestionsPosees, lsRepJustes, lsRepUser, note);
-                form3.Show();
+                FormDijkstra form4 = new FormDijkstra(lsQuestionsPosees, lsRepJustes, lsRepUser, note);
+                form4.Show();
+                
+
                 //Possibilité de quitter
                 btn_quit.Show();
+                btn_valider.Enabled = false;
                 btn_annuler.Enabled = false;
                 rbtn_reponse1.Enabled = false;
                 rbtn_reponse2.Enabled = false;

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDijkstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDijkstra.Designer.cs">
+      <DependentUpon>FormDijkstra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,10 +70,16 @@
     <Compile Include="FormQuestionnaire.Designer.cs">
       <DependentUpon>FormQuestionnaire.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericNode.cs" />
+    <Compile Include="Node2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Reponse.cs" />
+    <Compile Include="SearchTree.cs" />
+    <EmbeddedResource Include="FormDijkstra.resx">
+      <DependentUpon>FormDijkstra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFin.resx">
       <DependentUpon>FormFin.cs</DependentUpon>
     </EmbeddedResource>
