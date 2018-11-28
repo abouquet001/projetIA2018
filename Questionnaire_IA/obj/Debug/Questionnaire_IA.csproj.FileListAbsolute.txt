@@ -18,4 +18,19 @@ E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.ex
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.pdb
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.exe
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormFin.resources
+<<<<<<< Updated upstream
 E:\Documents\ENSC\2A\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.csproj.CoreCompileInputs.cache
+=======
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe.config
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.exe
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.pdb
+>>>>>>> Stashed changes
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormDijkstra.resources
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormFin.resources
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormQuestion.resources
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.FormQuestionnaire.resources
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.Properties.Resources.resources
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\obj\Debug\Questionnaire_IA.csproj.GenerateResource.Cache
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.exe
+C:\Users\Antoine\Documents\ENSC\2A\IA\projetIA2018\Questionnaire_IA\bin\Debug\Questionnaire_IA.pdb
