@@ -47,10 +47,6 @@ namespace Questionnaire_IA
         {
             //Fermeture du formulaire
             Application.Exit();
-            
-            
         }
-
-
     }
 }
