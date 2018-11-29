@@ -53,6 +53,9 @@ namespace Questionnaire_IA
 
         private bool CompareList(List<Node2> LA, List<int> LR)
         {
+            //Fonction de comparaison entre une liste de Node.Numero et une liste de int
+            //Sert à comparer les listes ouverts et fermés
+            //Renvoie true si les listes sont identiques
             bool equal = true;
             if (LA.Count != LR.Count)
             { return equal = false; }
@@ -78,8 +81,15 @@ namespace Questionnaire_IA
             }
             return equal;
         }
+
+
+
+
+
+
         private List<int> RecupO()
         {
+            //Fonction qui récupère et retourne la liste des ouverts
             List<int> LO = new List<int>();
             string saisie = tB_ouvert.Text;
             Node2 N = new Node2();
@@ -96,8 +106,13 @@ namespace Questionnaire_IA
             }
             return LO;
         }
+
+
+
+
         private List<int> RecupF()
         {
+            //Fonction qui récupère et renvoie la liste des fermés
             List<int> LF = new List<int>();
             string saisie = tB_Ferme.Text;
             Node2 N = new Node2();
@@ -120,12 +135,12 @@ namespace Questionnaire_IA
 
         private bool CompareTree(TreeView TV1, TreeView TV2)
         {
-
+            //Fonction de comparaison entre deux TreeView
+            //pour vérifier la justesse de l'arbre rentré par l'opérateur
             List<TreeNode> ltn1 = new List<TreeNode>();
             getallTreeNode(TV1.Nodes, ltn1);
             List<TreeNode> ltn2 = new List<TreeNode>();
             getallTreeNode(TV2.Nodes, ltn2);
-
             //find the difference
             foreach (TreeNode tn2 in ltn2)
             {
@@ -151,7 +166,6 @@ namespace Questionnaire_IA
                 }
 
             }
-
             return true;
         }
 
@@ -160,6 +174,7 @@ namespace Questionnaire_IA
 
         private void getallTreeNode(TreeNodeCollection nodes, List<TreeNode> ltn)
         {
+            //Fonction qui récupère tous les nodes d'un tree et les met sous forme de liste
             foreach (TreeNode td in nodes)
             {
                 ltn.Add(td);
@@ -170,31 +185,27 @@ namespace Questionnaire_IA
 
 
 
+        //Evènements
 
         private void btn_ouvertFermeSuivant_Click(object sender, EventArgs e)
         {
-            //numinitial = Convert.ToChar(lbl_init.Text);
-            //numfinal = Convert.ToChar(lbl_fin.Text);
+            //Evenement pour amener à l'itération des listes des ouverts et fermés suivante
             if (iteration == 0)
             {
                 N0.numero = numinitial - 48;
                 L_Ouverts.Add(N0);
             }
-
             iteration++;
             lbl_iteration.Text = "Itération : " + Convert.ToString(iteration);
             N = L_Ouverts[0];
 
             if (L_Ouverts.Count != 0 && N.EndState() == false)
             {
-
                 // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
-
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
                 L_Fermes.Add(N);
-
                 // Il faut trouver les noeuds successeurs de N
                 g.MAJSuccesseurs(N);
                 // Inutile de retrier car les insertions ont été faites en respectant l'ordre
@@ -208,9 +219,7 @@ namespace Questionnaire_IA
                 {
                     N = null;
                 }
-
-            }
-            
+            }            
             List<int> LF = new List<int>();
             List<int> LO = new List<int>();
             LF = RecupF();
@@ -244,7 +253,6 @@ namespace Questionnaire_IA
 
 
 
-        //Evènements
 
         private void FormDijkstra_Load(object sender, EventArgs e)
         {

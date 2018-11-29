@@ -53,7 +53,7 @@
             // btn_resultat
             // 
             this.btn_resultat.Location = new System.Drawing.Point(521, 485);
-            this.btn_resultat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_resultat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_resultat.Name = "btn_resultat";
             this.btn_resultat.Size = new System.Drawing.Size(100, 28);
             this.btn_resultat.TabIndex = 23;
@@ -65,7 +65,7 @@
             // 
             this.btn_insertNode.Enabled = false;
             this.btn_insertNode.Location = new System.Drawing.Point(725, 431);
-            this.btn_insertNode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_insertNode.Margin = new System.Windows.Forms.Padding(4);
             this.btn_insertNode.Name = "btn_insertNode";
             this.btn_insertNode.Size = new System.Drawing.Size(159, 28);
             this.btn_insertNode.TabIndex = 22;
@@ -77,7 +77,7 @@
             // 
             this.treeView1.Enabled = false;
             this.treeView1.Location = new System.Drawing.Point(711, 122);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(201, 221);
             this.treeView1.TabIndex = 21;
@@ -87,7 +87,7 @@
             this.lB_affichageNoeud.FormattingEnabled = true;
             this.lB_affichageNoeud.ItemHeight = 16;
             this.lB_affichageNoeud.Location = new System.Drawing.Point(65, 112);
-            this.lB_affichageNoeud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lB_affichageNoeud.Margin = new System.Windows.Forms.Padding(4);
             this.lB_affichageNoeud.Name = "lB_affichageNoeud";
             this.lB_affichageNoeud.Size = new System.Drawing.Size(132, 148);
             this.lB_affichageNoeud.TabIndex = 25;
@@ -115,7 +115,7 @@
             // btn_ouvertFermeSuivant
             // 
             this.btn_ouvertFermeSuivant.Location = new System.Drawing.Point(202, 431);
-            this.btn_ouvertFermeSuivant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ouvertFermeSuivant.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ouvertFermeSuivant.Name = "btn_ouvertFermeSuivant";
             this.btn_ouvertFermeSuivant.Size = new System.Drawing.Size(100, 28);
             this.btn_ouvertFermeSuivant.TabIndex = 29;
@@ -126,7 +126,7 @@
             // tB_Ferme
             // 
             this.tB_Ferme.Location = new System.Drawing.Point(316, 398);
-            this.tB_Ferme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tB_Ferme.Margin = new System.Windows.Forms.Padding(4);
             this.tB_Ferme.Name = "tB_Ferme";
             this.tB_Ferme.Size = new System.Drawing.Size(132, 22);
             this.tB_Ferme.TabIndex = 28;
@@ -134,7 +134,7 @@
             // tB_ouvert
             // 
             this.tB_ouvert.Location = new System.Drawing.Point(58, 398);
-            this.tB_ouvert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tB_ouvert.Margin = new System.Windows.Forms.Padding(4);
             this.tB_ouvert.Name = "tB_ouvert";
             this.tB_ouvert.Size = new System.Drawing.Size(132, 22);
             this.tB_ouvert.TabIndex = 27;
@@ -154,7 +154,7 @@
             // 
             this.tB_treeView.Enabled = false;
             this.tB_treeView.Location = new System.Drawing.Point(739, 384);
-            this.tB_treeView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tB_treeView.Margin = new System.Windows.Forms.Padding(4);
             this.tB_treeView.Name = "tB_treeView";
             this.tB_treeView.Size = new System.Drawing.Size(132, 22);
             this.tB_treeView.TabIndex = 33;
@@ -234,9 +234,9 @@
             // lbl_iteration
             // 
             this.lbl_iteration.AutoSize = true;
-            this.lbl_iteration.Location = new System.Drawing.Point(235, 399);
+            this.lbl_iteration.Location = new System.Drawing.Point(213, 398);
             this.lbl_iteration.Name = "lbl_iteration";
-            this.lbl_iteration.Size = new System.Drawing.Size(60, 13);
+            this.lbl_iteration.Size = new System.Drawing.Size(79, 17);
             this.lbl_iteration.TabIndex = 42;
             this.lbl_iteration.Text = "Itération : 0";
             // 
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 446);
+            this.ClientSize = new System.Drawing.Size(1052, 530);
             this.Controls.Add(this.lbl_iteration);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -264,7 +264,7 @@
             this.Controls.Add(this.btn_resultat);
             this.Controls.Add(this.btn_insertNode);
             this.Controls.Add(this.treeView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDijkstra";
             this.Text = "FormDijkstra";
             this.Load += new System.EventHandler(this.FormDijkstra_Load);
