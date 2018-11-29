@@ -50,7 +50,7 @@
             this.lbl_info.AutoSize = true;
             this.lbl_info.Location = new System.Drawing.Point(26, 162);
             this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(521, 102);
+            this.lbl_info.Size = new System.Drawing.Size(521, 136);
             this.lbl_info.TabIndex = 11;
             this.lbl_info.Text = resources.GetString("lbl_info.Text");
             // 
