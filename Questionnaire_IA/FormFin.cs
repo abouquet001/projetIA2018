@@ -17,7 +17,8 @@ namespace Questionnaire_IA
             //Initialisations
             InitializeComponent();
             Correction(lsQuestionsPosees, lsReponsesJustes, lsReponsesDonnees);
-            AffichageNote(note);            
+            AffichageNote(note);   
+                    
         }
 
 
@@ -45,7 +46,8 @@ namespace Questionnaire_IA
         private void btn_Ok_Click(object sender, EventArgs e)
         {
             //Fermeture du formulaire
-            Form.ActiveForm.Close();
+            Application.Exit();
+            
             
         }
 
