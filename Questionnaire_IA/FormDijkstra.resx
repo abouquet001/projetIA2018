@@ -125,7 +125,7 @@ N.B chaque numéro de noeud devra être séparé seulement par une virgule.
 </value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Dans un second temps, rentrez dans l'arbre les valurs des noeuds 
+    <value>Dans un second temps, rentrez dans l'arbre les valeurs des noeuds 
 correspondants. 
 N.B: pour entrez un noeud, indiquez le numéro voulu dans le champs 
 ci-dessous et choisissez le noeud que vous voulez renommer 

@@ -44,10 +44,10 @@
             this.lbl_fin = new System.Windows.Forms.Label();
             this.lbl_numFinal = new System.Windows.Forms.Label();
             this.lbl_numInit = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbl_iteration = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_resultat
@@ -183,15 +183,6 @@
             this.lbl_numInit.TabIndex = 37;
             this.lbl_numInit.Text = "Noeud Initial : ";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 15);
-            this.label1.TabIndex = 38;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -206,7 +197,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 227);
+            this.label3.Location = new System.Drawing.Point(12, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(363, 52);
             this.label3.TabIndex = 40;
@@ -215,21 +206,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(446, 9);
+            this.label4.Location = new System.Drawing.Point(436, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(335, 65);
             this.label4.TabIndex = 41;
             this.label4.Text = resources.GetString("label4.Text");
             // 
+            // lbl_iteration
+            // 
+            this.lbl_iteration.AutoSize = true;
+            this.lbl_iteration.Location = new System.Drawing.Point(235, 399);
+            this.lbl_iteration.Name = "lbl_iteration";
+            this.lbl_iteration.Size = new System.Drawing.Size(60, 13);
+            this.lbl_iteration.TabIndex = 42;
+            this.lbl_iteration.Text = "Itération : 0";
+            // 
             // FormDijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 429);
+            this.ClientSize = new System.Drawing.Size(783, 446);
+            this.Controls.Add(this.lbl_iteration);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_numInit);
             this.Controls.Add(this.lbl_numFinal);
             this.Controls.Add(this.lbl_fin);
@@ -269,9 +269,9 @@
         private System.Windows.Forms.Label lbl_fin;
         private System.Windows.Forms.Label lbl_numFinal;
         private System.Windows.Forms.Label lbl_numInit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_iteration;
     }
 }

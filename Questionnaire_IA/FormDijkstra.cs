@@ -167,7 +167,7 @@ namespace Questionnaire_IA
             }
 
             iteration++;
-
+            lbl_iteration.Text = "Itération : " + Convert.ToString(iteration);
             N = L_Ouverts[0];
 
             if (L_Ouverts.Count != 0 && N.EndState() == false)
@@ -183,7 +183,6 @@ namespace Questionnaire_IA
                 // Il faut trouver les noeuds successeurs de N
                 g.MAJSuccesseurs(N);
                 // Inutile de retrier car les insertions ont été faites en respectant l'ordre
-
                 // On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
                 // A condition qu'il existe bien sûr
                 if (L_Ouverts.Count > 0)
@@ -195,23 +194,6 @@ namespace Questionnaire_IA
                     N = null;
                 }
 
-                //List<GenericNode> solution = g.RechercheSolutionAEtoile();
-            }
-            if (N.EndState())
-            {
-                foreach (bool b in ouvertFermes)
-                {
-                    if (b == false)
-                    {
-                        OuvertFerme = false;
-                    }
-                }
-                btn_ouvertFermeSuivant.Enabled = false;
-                treeView1.Enabled = true;
-                btn_insertNode.Enabled = true;
-                tB_treeView.Enabled=true;
-                g.GetSearchTreeVide(treeView1);
-                originalTree = g.GetSearchTree();
             }
             
             List<int> LF = new List<int>();
@@ -318,7 +300,7 @@ namespace Questionnaire_IA
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
             lbl_init.Text = "0";
-            lbl_fin.Text = "6";
+            lbl_fin.Text =Convert.ToString(matrice.GetLength(1)-1) ;
             numinitial = Convert.ToChar(lbl_init.Text);
             numfinal = Convert.ToChar(lbl_fin.Text);
         }
@@ -353,5 +335,7 @@ namespace Questionnaire_IA
             form3.ShowDialog();
             Form.ActiveForm.Close();
         }
+
+        
     }
 }
