@@ -10,11 +10,7 @@ namespace Questionnaire_IA
     {
         public List<Node2> L_Ouverts;
         public List<Node2> L_Fermes;
-        /*public SearchTree(List<GenericNode> L_O , List<GenericNode> L_F)
-        {
-            L_Ouverts = L_O;
-            L_Fermes = L_F;
-        }*/
+        
         public SearchTree(List<Node2> L_O, List<Node2> L_F)
         {
             L_Ouverts = L_O;
@@ -56,14 +52,7 @@ namespace Questionnaire_IA
             return null;
         }
 
-        /*public List<GenericNode> RechercheSolutionAEtoile(List<GenericNode> L_Ouverts, List<GenericNode> L_Fermes)
-        {
-
-            // Le noeud passé en paramètre est supposé être le noeud initial
-
-            
-            return _LN;
-        }*/
+       
 
         public void MAJSuccesseurs(GenericNode N)
         {

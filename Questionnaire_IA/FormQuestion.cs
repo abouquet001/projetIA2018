@@ -179,7 +179,7 @@ namespace Questionnaire_IA
                 {
                     note = Evaluation(lsRepUser[n], lsRepJustes[n], note); //Notation de l'opérateur
                 }
-                //Affichage du formulaire de correction
+                //Affichage du formulaire de Dijkstra
                 FormDijkstra form4 = new FormDijkstra(lsQuestionsPosees, lsRepJustes, lsRepUser, note);
                 form4.Show();
                 

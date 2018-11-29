@@ -14,8 +14,9 @@ namespace Questionnaire_IA
 {
     public partial class FormDijkstra : Form
     {
+        //Variables 
         static public double[,] matrice;
-        static public int nbnodes = 10;
+        static public int nbnodes;
         static public char numinitial;
         static public char numfinal;
         static List<Node2> L_Ouverts = new List<Node2>();
@@ -28,10 +29,15 @@ namespace Questionnaire_IA
         static bool Treeview=false;
         static TreeView originalTree = new TreeView();
         static List<bool> ouvertFermes = new List<bool>();
+
+        // Elements du constructeur
         static int note;
         List<Question> lQP = new List<Question>();
         List<Reponse> lRJ = new List<Reponse>();
         List<Reponse> lRD = new List<Reponse>();
+
+
+        //Constructeur
 
         public FormDijkstra(List<Question> lsQuestionsPosees, List<Reponse> lsReponsesJustes, List<Reponse> lsReponsesDonnees, int _note)
         {
@@ -41,6 +47,9 @@ namespace Questionnaire_IA
             lRJ = lsReponsesJustes;
             lRD = lsReponsesDonnees;
         }
+
+
+        //Méthodes
 
         private bool CompareList(List<Node2> LA, List<int> LR)
         {
@@ -146,6 +155,9 @@ namespace Questionnaire_IA
             return true;
         }
 
+
+
+
         private void getallTreeNode(TreeNodeCollection nodes, List<TreeNode> ltn)
         {
             foreach (TreeNode td in nodes)
@@ -156,10 +168,13 @@ namespace Questionnaire_IA
             }
         }
 
+
+
+
         private void btn_ouvertFermeSuivant_Click(object sender, EventArgs e)
         {
-            numinitial = Convert.ToChar(lbl_init.Text);
-            numfinal = Convert.ToChar(lbl_fin.Text);
+            //numinitial = Convert.ToChar(lbl_init.Text);
+            //numfinal = Convert.ToChar(lbl_fin.Text);
             if (iteration == 0)
             {
                 N0.numero = numinitial - 48;
@@ -196,24 +211,7 @@ namespace Questionnaire_IA
                 }
 
                 //List<GenericNode> solution = g.RechercheSolutionAEtoile();
-            }
-            if (N.EndState())
-            {
-                foreach (bool b in ouvertFermes)
-                {
-                    if (b == false)
-                    {
-                        OuvertFerme = false;
-                    }
-                }
-                btn_ouvertFermeSuivant.Enabled = false;
-                treeView1.Enabled = true;
-                btn_insertNode.Enabled = true;
-                tB_treeView.Enabled=true;
-                g.GetSearchTreeVide(treeView1);
-                originalTree = g.GetSearchTree();
-            }
-            
+            }           
             List<int> LF = new List<int>();
             List<int> LO = new List<int>();
             LF = RecupF();
@@ -245,10 +243,14 @@ namespace Questionnaire_IA
             }
         }
 
+
+
+        //Evènements
+
         private void FormDijkstra_Load(object sender, EventArgs e)
         {
+            //Evenement au chargement du formulaire de Dijkstra
             StreamReader monStreamReader = new StreamReader("graphe1.txt");
-
             // Lecture du fichier avec un while, évidemment !
             // 1ère ligne : "nombre de noeuds du graphe
             string ligne = monStreamReader.ReadLine();
@@ -268,8 +270,7 @@ namespace Questionnaire_IA
             for (i = 0; i < nbnodes; i++)
                 for (int j = 0; j < nbnodes; j++)
                     matrice[i, j] = -1;
-
-            // Ensuite on a ls tructure suivante : 
+            // Ensuite on a la structure suivante : 
             //  arc : n°noeud départ    n°noeud arrivée  valeur
             //  exemple 4 : 
             ligne = monStreamReader.ReadLine();
@@ -286,7 +287,6 @@ namespace Questionnaire_IA
                     i++;
                 }
                 int N1 = Convert.ToInt32(strN1);
-
                 // On saute les blancs éventuels
                 while (ligne[i] == ' ') i++;
                 string strN2 = "";
@@ -296,7 +296,6 @@ namespace Questionnaire_IA
                     i++;
                 }
                 int N2 = Convert.ToInt32(strN2);
-
                 // On saute les blancs éventuels
                 while (ligne[i] == ' ') i++;
                 string strVal = "";
@@ -306,7 +305,6 @@ namespace Questionnaire_IA
                     i++;
                 }
                 double val = Convert.ToDouble(strVal);
-
                 matrice[N1, N2] = val;
                 matrice[N2, N1] = val;
                 lB_affichageNoeud.Items.Add(Convert.ToString(N1)
@@ -317,38 +315,44 @@ namespace Questionnaire_IA
             }
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
-            lbl_init.Text = "0";
+            lbl_init.Text = "0";// à changer
             lbl_fin.Text = "6";
             numinitial = Convert.ToChar(lbl_init.Text);
             numfinal = Convert.ToChar(lbl_fin.Text);
         }
 
+
+
+
         private void btn_insertNode_Click(object sender, EventArgs e)
         {
+            //Fonction de sélection du noeud du TreeView à remplir
             treeView1.SelectedNode.Text = tB_treeView.Text;
         }
 
 
+
+
         private void btn_resultat_Click(object sender, EventArgs e)
         {
-            
+            //Fonction pour comparer le treeView de l'opérateur (treeView1) avec celui calculé (originalTree)
             Treeview = CompareTree(treeView1, originalTree);
             if (OuvertFerme && Treeview)
             {
-                MessageBox.Show("Bravo ! Vous avez réussi ces deux derniers exercices");
+                MessageBox.Show("Bravo ! Vous avez réussi ces deux derniers exercices.");
                 note += 3;
             }
             else if(OuvertFerme && !Treeview)
             {
-                MessageBox.Show(" Vous n'avez réussi que les ouverts et les fermés");
+                MessageBox.Show("Mince ! Vous n'avez réussi que les ouverts et les fermés.");
                 note += 2;
             }
             else if (!OuvertFerme && Treeview)
             {
-                MessageBox.Show(" Vous n'avez réussi que le remplissage de l'arbre");
+                MessageBox.Show("Mince ! Vous n'avez réussi que le remplissage de l'arbre.");
                 note +=1 ;
             }
-            else { MessageBox.Show(" Désolé vous avez commis des erreurs dans ces deux derniers exercices"); }
+            else { MessageBox.Show(" Désolé, vous avez commis des erreurs pour ces deux dernières questions."); }
             FormFin form3 = new FormFin(lQP, lRJ, lRD, note);
             form3.ShowDialog();
             Form.ActiveForm.Close();

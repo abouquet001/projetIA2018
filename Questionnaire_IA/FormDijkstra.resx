@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label3.Text" xml:space="preserve">
-    <value>Dans un premier temps, itérez l'algotrythme Dijkstra à la main en 
-indiquant les la liste des ouverts et la liste des fermés à chaque itération.
+    <value>Dans un premier temps, itérez l'algorithme Dijkstra à la main en 
+indiquant la liste des ouverts et la liste des fermés à chaque itération.
 Vous commencez avec 0 dans la liste des fermés.
 N.B chaque numéro de noeud devra être séparé seulement par une virgule.
 </value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Dans un second temps, rentrez dans l'arbre les valurs des noeuds 
+    <value>Dans un second temps, entrez dans l'arbre les valeurs des noeuds 
 correspondants. 
-N.B: pour entrez un noeud, indiquez le numéro voulu dans le champs 
-ci-dessous et choisissez le noeud que vous voulez renommer 
-en cliquant dessus puis cliquez sur Valider.</value>
+N.B: pour entrer un noeud, indiquez le numéro voulu dans le champ
+en dessous puis choisissez le noeud que vous voulez renommer 
+en cliquant dessus et enfin cliquez sur Valider Noeud pour l'ajouter.</value>
   </data>
 </root>
