@@ -174,7 +174,7 @@ namespace Questionnaire_IA
             AjouteBrancheVide(L_Fermes[0], TN);
         }
 
-        // AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
+        // AjouteBrancheVide est exclusivement appelée par GetSearchTreeVide; les noeuds sont ajoutés de manière récursive
         private void AjouteBrancheVide(GenericNode GN, TreeNode TN)
         {
             foreach (GenericNode GNfils in GN.GetEnfants())

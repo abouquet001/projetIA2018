@@ -14,7 +14,7 @@ namespace Questionnaire_IA
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
-        ///[STAThread]
+        [STAThread]
         static void Main()
         {
             //  Projet IA 2018
