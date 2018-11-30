@@ -162,7 +162,7 @@ namespace Questionnaire_IA
         {
             //Bouton qui permet d'évaluer la réponse de l'opérateur,
             // d'enregistrer l'évaluation, de passer à la question suivante
-            // ou d'afficher la correction si les 20 questions sont passées
+            // ou d'afficher la correction si toutes les questions sont passées
 
             //Récupérer à quelle question on est 
             string intituleQuestion = lbl_intitule_question.Text;
@@ -171,8 +171,8 @@ namespace Questionnaire_IA
             //Enregistrer la réponse à la question en cours
             Enregistrer(lsQuestionsPosees.Last<Question>());
 
-            //Si on a atteint le nombre de questions voulu (ici 20)
-            if (numeroQuestion == 18) //à modifier
+            //Si on a atteint le nombre de questions voulu (ici 17)
+            if (numeroQuestion == 18) 
             {
                 InitializeRepJustes(); // Récupération des réponses justes
                 for (int n = 0; n < lsQuestionsPosees.Count; n++)
@@ -184,7 +184,7 @@ namespace Questionnaire_IA
                 form4.Show();
                 
 
-                //Possibilité de quitter
+                //Possibilités de quitter
                 btn_quit.Show();
                 btn_valider.Enabled = false;
                 btn_annuler.Enabled = false;

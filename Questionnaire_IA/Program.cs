@@ -17,6 +17,10 @@ namespace Questionnaire_IA
         ///[STAThread]
         static void Main()
         {
+            //  Projet IA 2018
+            //
+            //  Antoine Bouquet et Alice Cantagrel
+            //
             //Lancement du formulaire
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
